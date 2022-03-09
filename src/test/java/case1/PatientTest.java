@@ -92,7 +92,6 @@ public class PatientTest {
     assertEquals(ACTIVE, result.getStatus());
   }
 
-  @Disabled("Disables until a bug is fixed")
   @Test
   void nowThenDeactivationThenActiveTo_UserIsActive() {
     // given
