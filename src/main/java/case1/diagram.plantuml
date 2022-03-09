@@ -1,0 +1,44 @@
+@startuml
+
+title __CONTEXT's Class Diagram__\n
+
+      class case1.context.Details {
+          - deactivationDate : LocalDateTime
+          - id : Long
+          + Details()
+          + getDeactivationDate()
+          + getId()
+      }
+
+      enum case1.context.Status {
+        ACTIVE
+        INACTIVE
+      }
+
+      class case1.context.User {
+          - activeTo : LocalDateTime
+          - id : Long
+          + User()
+          + User()
+          + getActiveTo()
+          + getDetails()
+          + getId()
+      }
+
+      class case1.context.UserDto {
+          - activeTo : LocalDateTime
+          - id : Long
+          + getActiveTo()
+          + getId()
+          + getStatus()
+          + setActiveTo()
+          + setId()
+          + setStatus()
+      }
+
+
+  case1.context.User o-- case1.context.Details : details
+  case1.context.UserDto o-- case1.context.Status : status
+
+
+@enduml
